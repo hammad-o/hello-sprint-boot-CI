@@ -58,6 +58,5 @@ jobs:
                 context: docker/hello-spring
                 push: true
                 tags: |
-                    ${{ secrets.DOCKERHUB_USERNAME }}/hello-sping: latest
-                    ${{ secrets.DOCKERHUB_USERNAME }}/hello-sping: {{ github.sha }}
-                    ${{ secrets.DOCKERHUB_USERNAME }}/hello-sping: {{ github.ref_name }}
+                  ${{ secrets.DOCKERHUB_USERNAME }}/hello-spring:latest
+                  ${{ secrets.DOCKERHUB_USERNAME }}/hello-spring:${{ github.sha }}
